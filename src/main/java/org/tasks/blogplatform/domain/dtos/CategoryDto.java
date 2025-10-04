@@ -13,7 +13,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 public class CategoryDto {
-    private UUID Id;
+    private UUID id;
     private String name;
     private long postCount;
 

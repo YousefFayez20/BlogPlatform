@@ -9,6 +9,7 @@ import org.tasks.blogplatform.domain.Category;
 import org.tasks.blogplatform.domain.Post;
 import org.tasks.blogplatform.domain.PostStatus;
 import org.tasks.blogplatform.domain.dtos.CategoryDto;
+import org.tasks.blogplatform.domain.dtos.CreateCategoryRequest;
 
 @Mapper(componentModel = "spring",unmappedTargetPolicy = ReportingPolicy.IGNORE )
 public interface CategoryMapper {
@@ -22,4 +23,5 @@ public interface CategoryMapper {
         }
         return posts.stream().filter(post -> PostStatus.PUBLISHED.equals((post.getStatus()))).count();
     }
+    Category toEntity(CreateCategoryRequest createCategoryRequest);
 }
